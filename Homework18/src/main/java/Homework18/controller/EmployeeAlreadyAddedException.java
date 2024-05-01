@@ -1,7 +1,0 @@
-package Homework18.controller;
-
-public class EmployeeAlreadyAddedException extends RuntimeException {
-    public EmployeeAlreadyAddedException(String message) {
-        super(message);
-    }
-}

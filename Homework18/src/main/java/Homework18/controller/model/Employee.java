@@ -1,4 +1,4 @@
-package Homework18.controller;
+package Homework18.controller.model;
 
 import java.util.Objects;
 
@@ -11,6 +11,18 @@ public class Employee {
         this.firstName = firstName;
         this.lastName = lastName;
     }
+
+    public Employee() {
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
     public String getFirstName() {
         return firstName;
     }
@@ -21,8 +33,12 @@ public class Employee {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Employee employee = (Employee) o;
         return Objects.equals(firstName, employee.firstName) && Objects.equals(lastName, employee.lastName);
     }
@@ -32,9 +48,4 @@ public class Employee {
         return Objects.hash(firstName, lastName);
     }
 
-    @Override
-    public String toString() {
-        return "Имя = " + firstName + '\'' +
-                ", Фамилие = " + lastName + '\'';
-    }
 }
